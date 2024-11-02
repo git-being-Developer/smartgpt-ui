@@ -1,0 +1,737 @@
+/* Reset and Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #1b1b2f; /* Deep dark purple background */
+    color: #f0e7f6; /* Light, warm text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Hero Section for all pages */
+.hero {
+    background: #1b1b2f;
+    color: #ff6f61;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7);
+    margin-bottom: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    color: #ff6f61;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #f0e7f6;
+    margin-top: 5px;
+}
+
+/* Login and Signup Sections */
+.login-section, .signup-section {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+    color: #f0e7f6;
+    text-align: center;
+    animation: slideUp 1s ease;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    font-size: 1em;
+    background-color: #333;
+    color: #f0e7f6;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+input::placeholder {
+    color: #bfb6c1;
+}
+
+button, .login-btn, .signup-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff6f61;
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0px 5px 15px rgba(255, 111, 97, 0.4);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover, .login-btn:hover, .signup-btn:hover {
+    background-color: #ff4b3e;
+    transform: scale(1.05);
+}
+
+.signup-link, .login-link {
+    color: #ff6f61;
+    text-decoration: none;
+}
+
+.signup-link:hover, .login-link:hover {
+    text-decoration: underline;
+}
+
+/* Features Section */
+.features-section {
+    padding: 20px 0;
+}
+
+.features-section h2 {
+    color: #ff6f61;
+    margin-bottom: 30px;
+}
+
+.features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.feature-card {
+    background-color: #2b2e3d;
+    border-radius: 10px;
+    padding: 20px;
+    width: 45%;
+    color: #f0e7f6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.feature-card h3 {
+    font-size: 1.2em;
+    color: #ff6f61;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #c5c5c5;
+    font-size: 0.95em;
+}
+
+/* Dashboard Section */
+.dashboard-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.dashboard-left, .dashboard-right {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #2b2e3d;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Chat Section Styling */
+.chat-section {
+    max-width: 90%; /* Increase width to cover more screen area */
+    margin: 0 auto;
+    background-color: #2b2e3d;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+    color: #f0e7f6;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.chat-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #ffdd67;
+}
+
+/* Chat Messages Bubble Style */
+.chat-messages {
+    max-height: 60vh; /* Higher chat window for better visibility */
+    overflow-y: auto;
+    background-color: #333;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    color: #f0e7f6;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Message Bubbles */
+.chat-messages .message {
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 1em;
+    width: auto;
+    max-width: 75%; /* Limit each bubble to 75% of the chat area */
+    word-wrap: break-word;
+}
+
+/* User Message Bubble */
+.chat-messages .user-message {
+    background-color: #40434e;
+    color: #ffdd67;
+    align-self: flex-end;
+    text-align: left;
+}
+
+/* GPT Message Bubble */
+.chat-messages .gpt-message {
+    background-color: #3e3e5e;
+    color: #f0e7f6;
+    align-self: flex-start;
+    text-align: left;
+}
+
+/* Chat Input and Send Button */
+#chatInput {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1em;
+    background-color: #444;
+    color: #f0e7f6;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Purchase Section Styling */
+.purchase-section {
+    background-color: #2b2e3d;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    color: #f0e7f6;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.purchase-section h2 {
+    color: #ffdd67;
+    margin-bottom: 10px;
+}
+
+.purchase-section p {
+    font-size: 1em;
+    color: #c5c5c5;
+    margin-bottom: 20px;
+}
+
+.purchase-section .btn-primary {
+    background-color: #ff4b3e;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.purchase-section .btn-primary:hover {
+    background-color: #ff8c42;
+}
+
+/* Responsive Design */
+@media (min-width: 1024px) {
+    .hero h1 { font-size: 3em; }
+    .hero p { font-size: 1.3em; }
+}
+/* General container styling */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  /* Welcome section */
+  .welcome-section {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .welcome-section h1 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .welcome-section p {
+    font-size: 1em;
+    color: #666;
+  }
+  
+  /* Login section */
+  .login-section {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .login-section h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .login-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .login-section input {
+    width: 90%;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .login-section .login-btn {
+    width: 90%;
+    padding: 10px;
+    font-size: 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .login-section .login-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .signup-text {
+    font-size: 0.9em;
+    color: #666;
+  }
+  
+  .signup-link {
+    color: #4CAF50;
+    cursor: pointer;
+  }
+  
+  .signup-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Features section */
+  .features-section {
+    width: 100%;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    text-align: center;
+  }
+  
+  .features-section h3 {
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .features-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .features-section li {
+    font-size: 0.95em;
+    color: #555;
+    margin: 8px 0;
+  }
+  
+  .features-section li strong {
+    color: #333;
+  }
+/* General container styling */
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  /* Welcome section */
+  .welcome-section {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .welcome-section h1 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .welcome-section p {
+    font-size: 1em;
+    color: #666;
+  }
+  
+  /* Signup section */
+  .signup-section {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .signup-section h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .signup-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .signup-section input {
+    width: 90%;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .signup-section .signup-btn {
+    width: 90%;
+    padding: 10px;
+    font-size: 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .signup-section .signup-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .login-text {
+    font-size: 0.9em;
+    color: #666;
+  }
+  
+  .login-link {
+    color: #4CAF50;
+    cursor: pointer;
+  }
+  
+  .login-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Features section */
+  .features-section {
+    width: 100%;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    text-align: center;
+  }
+  
+  .features-section h3 {
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .features-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .features-section li {
+    font-size: 0.95em;
+    color: #555;
+    margin: 8px 0;
+  }
+  
+  .features-section li strong {
+    color: #333;
+  }
+/* General container styling */
+.purchase-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  /* Balance section */
+  .balance-section {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .balance-section h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .balance-section .balance-amount {
+    font-size: 2em;
+    color: #4CAF50;
+    font-weight: bold;
+  }
+  
+  /* Purchase section */
+  .purchase-section {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .purchase-section h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .purchase-section p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  /* Bundle options */
+  .bundle-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .bundle-button {
+    width: 80%;
+    padding: 15px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .bundle-button:hover {
+    background-color: #45a049;
+  }
+  
+  .bundle-button strong {
+    font-size: 1.1em;
+  }
+  
+  .bundle-button span {
+    font-size: 1em;
+    opacity: 0.85;
+  }
+      
+/* Chat container styling */
+/* Chat container styling */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    max-width: 700px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    overflow: hidden;
+  }
+  
+  /* Chat header with balance info */
+ /* Chat header styling */
+/* Chat header styling */
+/* Dark Theme Chat Header Styling */
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background-color: #333; /* Dark background for a sleek look */
+    color: #ffffff; /* White text for contrast */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chat-header h2 {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin: 0;
+    flex: 1;
+    text-align: center;
+    color: #f1f1f1; /* Light text for contrast */
+  }
+  
+  /* Balance and Buy More Tokens Button */
+  .balance-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9em;
+  }
+  
+  .token-balance {
+    font-weight: 500;
+    color: #cfcfcf; /* Softer contrast for balance text */
+  }
+  
+  .buy-credits {
+    padding: 4px 10px;
+    font-size: 0.85em;
+    background-color: #555; /* Slightly lighter than header for contrast */
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .buy-credits:hover {
+    background-color: #777; /* Slight hover color change */
+    box-shadow: 0 2px 4px rgba(  
+
+  /* Chat window styling */
+  .chat-window {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+  }
+  
+  .message {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 80%;
+    word-wrap: break-word;
+  }
+  
+  .message.user {
+    background-color: #e0f7fa;
+    align-self: flex-end;
+  }
+  
+  .message.gpt {
+    background-color: #f1f1f1;
+    align-self: flex-start;
+  }
+  
+  /* Input and file upload section */
+  .chat-input-section {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #eee;
+  }
+  
+  .chat-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-right: 10px;
+  }
+  
+  .file-upload-icons {
+    display: flex;
+    gap: 10px;
+    font-size: 1.5em;
+    color: #4CAF50;
+  }
+  
+  .file-upload-icons label {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .file-upload-icons input[type="file"] {
+    display: none;
+  }
+  
